@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\calculadora\ci-demo.csproj" />
+    <ProjectReference Include="..\Calculadora\ci-demo.csproj" />
   </ItemGroup>
 
 </Project>
