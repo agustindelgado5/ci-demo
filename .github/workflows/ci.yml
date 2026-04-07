@@ -35,4 +35,4 @@ jobs:
 
       #  Ejecutar tests
       - name: Run tests
-        run: dotnet test ./Tests/Tests.csproj --no-build --configuration Release --logger "github"
+        run: dotnet test ./Tests/Tests.csproj --no-build --configuration Release
