@@ -10,20 +10,29 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
+    
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
+      #  Clonar repositorio
       - name: Checkout code
         uses: actions/checkout@v3
 
+      #  Instalar .NET 9
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'  
+          dotnet-version: '9.0.x'
 
+      #  Restaurar dependencias
       - name: Restore dependencies
         run: dotnet restore ./Tests/Tests.csproj
 
+      #  Construir proyecto
       - name: Build project
         run: dotnet build ./Tests/Tests.csproj --no-restore --configuration Release
 
+      #  Ejecutar tests
       - name: Run tests
         run: dotnet test ./Tests/Tests.csproj --no-build --configuration Release --logger "github"
