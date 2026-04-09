@@ -1,7 +1,7 @@
 # Conclusión
 
-La Integración Continua es una práctica clave en la ingeniería de software que permite mejorar la calidad del producto y optimizar el proceso de desarrollo.
+La Integración Continua es una práctica fundamental en el desarrollo de software moderno, ya que permite integrar cambios de manera frecuente y validarlos automáticamente mediante procesos de compilación y pruebas. A diferencia de enfoques tradicionales, la CI promueve una integración constante del código, reduciendo los problemas derivados de integraciones tardías.
 
-En este trabajo se implementó un pipeline de CI utilizando GitHub Actions, logrando automatizar la compilación y ejecución de tests en cada cambio del repositorio.
+En este trabajo se implementó un pipeline de CI utilizando GitHub Actions, logrando automatizar la restauración de dependencias, la compilación del proyecto y la ejecución de tests en cada cambio del repositorio.
 
-Esto permite validar el código de forma continua y detectar errores de manera temprana, facilitando el desarrollo de software más confiable.
+Esto permite validar el código de forma continua, detectar errores de manera temprana y garantizar que cada modificación mantenga la estabilidad del sistema, contribuyendo así a un desarrollo más confiable y ordenado..
