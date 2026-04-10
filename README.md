@@ -1,36 +1,55 @@
-# CI Demo con GitHub Actions
+# Proyecto CI - Integración Continua con GitHub Actions
 
 ## Descripción
+Este proyecto demuestra la implementación de un pipeline de Integración Continua (CI) utilizando GitHub Actions en una aplicación simple desarrollada en C# con .NET.
 
-Este proyecto demuestra la implementación de un pipeline de Integración Continua (CI) utilizando GitHub Actions.
+El objetivo es automatizar el proceso de validación del código mediante compilación y ejecución de tests en cada cambio realizado en el repositorio.
 
-## Aplicación desarrollada
+## Estructura del proyecto
 
-La aplicación consiste en un programa de consola simple desarrollado en C#. Actualmente muestra un mensaje por pantalla.
+calculadora/
+    Calculadora.cs
 
-Su objetivo es servir como base para implementar un pipeline de Integración Continua, permitiendo validar automáticamente la compilación y ejecución de tests.
+Tests/
+    UnitTest1.cs
 
-No busca resolver un problema complejo, sino demostrar el funcionamiento del pipeline CI.
+ci-demo.sln
 
-## Funcionamiento
+## Secciones del trabajo
 
-Cada vez que se realiza un push al repositorio, se ejecuta automáticamente un pipeline que realiza los siguientes pasos:
+- [Introducción](./introduccion.md)
+- [Desarrollo](./desarrollo.md)
+- [Beneficios](./beneficios.md)
+- [Desafíos](./desafios.md)
+- [Conclusión](./conclusion.md)
+- [Referencias](./referencias.md)
 
-- Restore dependencies:
-  Descarga las dependencias necesarias del proyecto.
+## Pipeline de CI
 
-- Build project:
-  Compila el código fuente para verificar que no existan errores.
+El pipeline se encuentra configurado en:
 
-- Run tests:
-  Ejecuta tests automáticos para validar el correcto funcionamiento del sistema.
+.github/workflows/ci.yml
+
+Este se ejecuta automáticamente ante cada push o pull request sobre la rama `main`.
+
+### Funcionalidades del pipeline
+
+- Restauración de dependencias
+- Compilación del proyecto
+- Ejecución de tests unitarios
 
 ## Tecnologías utilizadas
 
+- .NET 9
 - C#
-- .NET
-- GitHub Actions
+- xUnit (para testing)
+- GitHub Actions (CI)
 
-## Conclusión
+## Ejecución local
 
-La implementación de este pipeline permite automatizar la validación del código en cada cambio, mejorando la calidad del software y reduciendo errores en el proceso de desarrollo.
+Para ejecutar el proyecto y los tests de forma local:
+
+```bash
+dotnet restore
+dotnet build
+dotnet test
